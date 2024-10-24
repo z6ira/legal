@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <script src="menu.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Poluição<em><span class="span1">M</span></em><em><span class="span2">T</span></em></div>
+        <nav class="navegacao">
+            <ul class="center1">
+                <li><a href="index.html">Início</a></li>
+                <li>
+                    <a href="desastres.html">Desastres</a>
+                    <ul class="center2">
+                    </ul>
+                </li>
+                <li>
+                    <a href="impactos.html">Impactos</a>
+                    <ul class="center3">
+                    </ul>
+                </li>
+                <ul>
+                <li><a href="solucao.html">Solução</a></li>
+            </ul>
+        </nav>
+
+        <div class="btn-abrir-menu" id="btn-menu">
+            <i><img src="img/icons8-list-32.png"></i>
+        </div>
+        <div class="menu-mobile" id="menu-mobile">
+            <div class="fechar">
+            </div>
+            <br>
+            <br>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li>
+                        <a href="desastres.html">Desastres</a>
+                        <ul>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="impactos.html">Impactos</a>
+                        <ul>
+                        </ul>
+                    </li>
+                    <ul>
+                    <li><a href="solucao.html">Solução</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="overlay-menu" id="overlay-menu"></div>
+    </header>
+
+
+    <section class="hero">
+        <h1 class="escondido">Poluição</h1>
+        <p class="escondido">PROJETO INTEGRADOR SENAC</p>
+        <div class="image-container">
+            <img src="img/imagem1.png" class="image active">
+            <img src="img/imagem2.png" class="image">
+            <img src="img/imagem3.png" class="image">
+            <img src="img/imagem4.png" class="image">
+            <img src="img/imagem5.png" class="image">
+        </div>
+    </section>
+    
+    
+    <section class="cards escondido">
+        <div class="card desastres-card"><a href="desastres.html">
+            <h2>DESASTRES</h2>
+            <p>AO MEIO AMBIENTE</p>
+            <img class="desastres" src="img/desastres.jpeg">
+        </a></div>
+        <div class="card impactos-card"><a href="impactos.html">
+            <h2>IMPACTOS</h2>
+            <p>GLOBAIS</p>
+            <img class="impactos" src="img/impactos.jpeg">
+        </a></div>
+        <div class="card solucao-card"><a href="solucao.html">
+            <h2>SOLUÇÃO</h2>
+            <p>A POLUIÇÃO GLOBAL</p>
+            <img class="solucao" src="img/solucao.png">
+        </a></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 SENAC MT</p>
+    </footer>
+</body>
+<script src="scripts.js"></script>
+</html>
