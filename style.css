@@ -326,7 +326,7 @@ footer {
 @media screen and (max-width: 1080px) {
     .image-container {
         width: 200%; 
-        height: 200%; 
+        overflow-x: hidden;
     }
     
     .hero p{
@@ -367,11 +367,18 @@ footer {
         top: 3rem;
     }
 
-    body {
-        overflow-x: hidden;
-    }
-
     .btn-abrir-menu img{
         display: flex;
+    }
+
+    .menu-mobile {
+        background-color: #1a1a1a;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99999;
+        overflow: hidden;
+        transition: .5s;
     }
 }
