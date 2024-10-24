@@ -325,7 +325,7 @@ footer {
 
 @media screen and (max-width: 1080px) {
     .image-container {
-        width: 200%; 
+        width: 100%; 
         overflow-x: hidden;
     }
     
