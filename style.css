@@ -380,7 +380,7 @@ footer {
         transition: .5s;
     }
 
-    html {
+    html, body {
         overflow-x: hidden;
     }
 }
