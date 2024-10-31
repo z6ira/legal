@@ -1,0 +1,419 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    color: #333;
+    background-color: #ececec;
+}
+
+/* Navegação */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #1a1a1a;
+    color: white;
+}
+
+.logo {
+    font-size: 29px;
+    font-weight: bold;
+    color:rgb(255, 255, 255);
+}
+
+.span1 {
+    color: greenyellow;
+    font-size: 20px;
+    padding-left: 2px;
+
+}
+
+.span2 {
+    color: yellow;
+    font-size: 20px;
+
+}
+
+.menu {
+    border-radius: 5px;
+}
+
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    left: -70px;
+}
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav ul li:hover > a {
+    background-color: gray;
+    border-radius: 5px;
+}
+    
+.center1 {
+    position: relative;
+    top: 0;
+    right: 400px;
+    border-left-style: solid;
+    border-left-color:#a1a1a1;
+    border-left-width: 2px;
+    border-right-style: solid;
+    border-right-color:#a1a1a1;
+    border-right-width: 2px;
+    z-index: 1000;
+}
+
+.center2 {
+    z-index: 1000;
+    position: relative;
+    top: 0;
+    right: 550px;
+}
+
+.center3 {
+    z-index: 1000;
+    position: relative;
+    top: 0;
+    right: 550px;
+}
+
+.dropdown-solution {
+    display: none; /* Esconde o dropdown inicialmente */
+    left: -3rem;
+    top: 1.5rem;
+    position: absolute; /* Posiciona o dropdown em relação ao seu item pai */
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+nav ul li:hover .dropdown-solution {
+    display: block; /* Exibe o dropdown ao passar o mouse */
+}
+
+.dropdown-solution li {
+    padding: 5px 15px;
+}
+
+.dropdown-solution li a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-solution li:hover {
+    background-color: gray;
+}
+
+/* Menu mobile */
+
+.menu-mobile {
+    background-color: #1a1a1a;
+    height: 100vh;
+    width: 0%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    overflow: hidden;
+    transition: .5s;
+}
+    
+.btn-abrir-menu{
+    color: #fff;
+    background-color: #1a1a1a;
+    border: 0;
+}
+    
+.btn-abrir-menu img{
+    display: none;
+}
+    
+.overlay-menu {
+    background-color: #1a1a1ab6;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+    
+.menu-mobile .fechar i{
+    color: white;
+    font-size: 20px;
+}
+    
+.menu-mobile ul {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+    
+.menu-mobile li {
+    padding: 15px;
+}
+    
+.menu-mobile nav{
+    width: 50vh;
+}
+    
+.menu-mobile nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    display: block;
+}
+    
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+    
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+    
+.btn-abrir-menu img{
+    width: 32px;
+    height: 32px;
+} 
+
+/* Principal */
+
+.hero {
+    height: 54rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    top: 50px;
+}
+
+.hero h1,
+.hero p {
+    position: absolute; 
+    z-index: 10; 
+    color: white; 
+    text-align: center;
+    top: 35vh;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    margin: -1rem;
+}
+
+.hero p {
+    font-size: 2rem;
+    margin-top: 5rem; 
+}
+
+.image-container {
+    position: relative;
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 3.2rem;
+    box-shadow: 0px 0px 10px #000;
+}
+
+.image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+    display: flex;
+}
+
+.image.active {
+    opacity: 1;
+    
+}
+
+/* Card de navegação */
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+    padding: 80px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.card a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+/* footer */
+
+footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    top: 100%;
+    width: 100%;
+}
+
+/* Imagens cards */
+
+.solucao {
+    height: 230px;
+    width: 300px;
+    position: relative;
+    right: 20px;
+}
+
+.impactos {
+    height: 230px;
+    width: 300px;
+    position: relative;
+    right: 30px;
+}
+
+.desastres {
+    height: 200px;
+    width: 300px;
+    position: relative;
+    right: 30px;
+}
+
+/* Animação lateral */
+
+.escondido {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-100%);
+    transition: all 1s;
+
+}
+
+.apareceu {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 1s;
+}
+
+/* Responsivo celular */
+
+@media screen and (max-width: 1080px) {
+    .image-container {
+        width: 200%; 
+    }
+    
+    .hero p{
+        font-size: 1.3rem;
+        margin-top: 0rem; 
+    }
+
+    .hero h1{
+        font-size: 3rem;
+        margin-top: -4rem;
+    }
+
+    .hero {
+        height: 43rem;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .navegacao{
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    .impactos-card{
+        position: relative;
+        top: 1.5rem;
+    }
+
+    .solucao-card{
+        position: relative;
+        top: 3rem;
+    }
+
+    .btn-abrir-menu img{
+        display: flex;
+    }
+
+    .menu-mobile {
+        background-color: #1a1a1a;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99999;
+        overflow: hidden;
+        transition: .5s;
+    }
+
+    html, body{
+        overflow-x: hidden;
+    }
+}
+
